@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Profile from "../assets/profile.jpg";
+import Profile from "../assets/profile.webp";
 import { FadeLeft, FadeRight } from "../animations/MotionWrappers";
 
 const infoItems = [
@@ -23,6 +23,9 @@ const Intro = () => {
             <img
               src={Profile}
               alt="Sohail Shabbir"
+              width={300}
+              height={420}
+              loading="lazy"
               className="object-cover w-full h-full brightness-105 contrast-110 saturate-[0.9] transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"
             />
             {/* Bottom gradient overlay for depth */}

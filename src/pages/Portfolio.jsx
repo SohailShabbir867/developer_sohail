@@ -6,12 +6,12 @@ import {
 } from "../animations/MotionWrappers";
 import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 
-import PortfolioImg from "../assets/imagep.jpg";
-import FoodGardenImg from "../assets/Foodgarden.png";
-import EcommerceImg from "../assets/Ecommerce.png";
-import WeatherImg from "../assets/weatherapp.png";
-import JobsImg from "../assets/image 1.jpg";
-import PasswordImg from "../assets/Passwordgenerator.png";
+import PortfolioImg from "../assets/imagep.webp";
+import FoodGardenImg from "../assets/Foodgarden.webp";
+import EcommerceImg from "../assets/Ecommerce.webp";
+import WeatherImg from "../assets/weatherapp.webp";
+import JobsImg from "../assets/image 1.webp";
+import PasswordImg from "../assets/Passwordgenerator.webp";
 
 const projects = [
   {
@@ -107,6 +107,10 @@ const Portfolio = () => {
                   <img
                     src={project.image}
                     alt={project.title}
+                    width={600}
+                    height={224}
+                    loading="lazy"
+                    decoding="async"
                     className="object-cover w-full h-full transition-all duration-700 group-hover:scale-110 group-hover:brightness-75"
                   />
                   <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-dark via-dark/60 to-transparent group-hover:opacity-100" />

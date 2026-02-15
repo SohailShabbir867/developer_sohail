@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
 
-import ReactLogo from "../assets/react.png";
-import NodeLogo from "../assets/node.png";
-import CssLogo from "../assets/css.png";
-import HtmlLogo from "../assets/html.png";
-import JavascriptLogo from "../assets/javascript.png";
-import BootstrapLogo from "../assets/bootstrap.png";
-import MongoLogo from "../assets/mongo.png";
-import CppLogo from "../assets/cplusplus.png";
-import CsharpLogo from "../assets/csharp.png";
-import JavaLogo from "../assets/java.png";
-import LinuxLogo from "../assets/linux.png";
-import CLogo from "../assets/c.png";
-import PhotoshopLogo from "../assets/photoshop.png";
-import IllustratorLogo from "../assets/illustrator.png";
-import LightroomLogo from "../assets/lightroom.png";
+import ReactLogo from "../assets/react.webp";
+import NodeLogo from "../assets/node.webp";
+import CssLogo from "../assets/css.webp";
+import HtmlLogo from "../assets/html.webp";
+import JavascriptLogo from "../assets/javascript.webp";
+import BootstrapLogo from "../assets/bootstrap.webp";
+import MongoLogo from "../assets/mongo.webp";
+import CppLogo from "../assets/cplusplus.webp";
+import CsharpLogo from "../assets/csharp.webp";
+import JavaLogo from "../assets/java.webp";
+import LinuxLogo from "../assets/linux.webp";
+import CLogo from "../assets/c.webp";
+import PhotoshopLogo from "../assets/photoshop.webp";
+import IllustratorLogo from "../assets/illustrator.webp";
+import LightroomLogo from "../assets/lightroom.webp";
 
 const skillsData = [
   { name: "React", imgSrc: ReactLogo },
@@ -25,7 +25,7 @@ const skillsData = [
   { name: "Bootstrap", imgSrc: BootstrapLogo },
   { name: "MongoDB", imgSrc: MongoLogo },
   { name: "C++", imgSrc: CppLogo },
-  { name: "C#", imgSrc: CsharpLogo },
+  { name: "Canva", imgSrc: CsharpLogo },
   { name: "Java", imgSrc: JavaLogo },
   { name: "Linux", imgSrc: LinuxLogo },
   { name: "C", imgSrc: CLogo },
@@ -51,9 +51,13 @@ const Skills = () => {
             <img
               src={skill.imgSrc}
               alt={skill.name}
+              width={48}
+              height={48}
+              loading="lazy"
+              decoding="async"
               className="object-contain w-10 h-10 mb-3 transition-transform duration-300 sm:w-12 sm:h-12 group-hover:scale-110"
             />
-            <span className="text-xs font-medium text-center text-gray-400 group-hover:text-white transition-colors">
+            <span className="text-xs font-medium text-center text-gray-400 transition-colors group-hover:text-white">
               {skill.name}
             </span>
           </motion.div>

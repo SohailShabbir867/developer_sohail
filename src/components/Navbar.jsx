@@ -8,23 +8,17 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Track active section based on viewport position
-  useEffect(() => {
     const sectionIds = ["home", "about", "portfolio", "experience", "contact"];
 
     const handleScroll = () => {
+      // Combined: background change + active section tracking
+      setScrolled(window.scrollY > 50);
+
       let current = "home";
       for (const id of sectionIds) {
         const el = document.getElementById(id);
         if (!el) continue;
         const rect = el.getBoundingClientRect();
-        // Section is active if its top is above the middle of viewport
-        // AND its bottom is still in view
         if (rect.top <= 150 && rect.bottom > 150) {
           current = id;
         }

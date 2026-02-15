@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
-import Profile from "../assets/profile.jpg";
+import Profile from "../assets/profile.webp";
 import { SOCIAL_LINKS } from "../data/constants";
 
 const Home = () => {
@@ -44,17 +44,17 @@ const Home = () => {
       id="home"
       className="relative w-full min-h-[calc(100vh-64px)] md:min-h-screen flex items-center bg-dark overflow-hidden"
     >
-      {/* ── Animated background lines ── */}
+      {/* ── Animated background lines (reduced for mobile perf) ── */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(8)].map((_, i) => (
+        {[...Array(3)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent"
+            className="absolute h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent will-change-transform"
             style={{
-              top: `${10 + i * 12}%`,
+              top: `${15 + i * 25}%`,
               left: "-10%",
               width: "120%",
-              rotate: `${-15 + i * 4}deg`,
+              rotate: `${-10 + i * 8}deg`,
             }}
             initial={{ x: "-100%", opacity: 0 }}
             animate={{
@@ -62,20 +62,20 @@ const Home = () => {
               opacity: [0, 0.4, 0.4, 0],
             }}
             transition={{
-              duration: 6 + i * 1.5,
+              duration: 8 + i * 2,
               repeat: Infinity,
-              delay: i * 0.8,
+              delay: i * 1.5,
               ease: "linear",
             }}
           />
         ))}
         {/* Vertical accent lines */}
-        {[...Array(5)].map((_, i) => (
+        {[...Array(2)].map((_, i) => (
           <motion.div
             key={`v-${i}`}
-            className="absolute w-px bg-gradient-to-b from-transparent via-accent/10 to-transparent"
+            className="absolute w-px bg-gradient-to-b from-transparent via-accent/10 to-transparent will-change-transform"
             style={{
-              left: `${15 + i * 18}%`,
+              left: `${25 + i * 35}%`,
               top: "-10%",
               height: "120%",
             }}
@@ -84,10 +84,10 @@ const Home = () => {
               opacity: [0.05, 0.15, 0.05],
             }}
             transition={{
-              duration: 8 + i * 2,
+              duration: 10 + i * 3,
               repeat: Infinity,
               repeatType: "reverse",
-              delay: i * 1.2,
+              delay: i * 2,
               ease: "easeInOut",
             }}
           />
@@ -225,6 +225,10 @@ const Home = () => {
               <img
                 src={Profile}
                 alt="Sohail Shabbir"
+                width={430}
+                height={430}
+                fetchPriority="high"
+                decoding="sync"
                 className="relative z-10 w-[280px] sm:w-[320px] md:w-[380px] lg:w-[430px] h-auto object-contain brightness-105 contrast-110 saturate-[0.85] group-hover:scale-[1.02] transition-transform duration-700 drop-shadow-[0_10px_30px_rgba(0,0,0,0.6)]"
               />
 

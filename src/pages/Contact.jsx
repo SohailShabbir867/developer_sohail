@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import {
   FaFacebook,
@@ -54,6 +53,9 @@ const Contact = () => {
     const message = formData.get("message").trim();
 
     try {
+      // Dynamically import emailjs only when needed
+      const emailjs = (await import("@emailjs/browser")).default;
+
       // 1. Send the contact message to you
       await emailjs.send(
         "service_inmdbyl",
