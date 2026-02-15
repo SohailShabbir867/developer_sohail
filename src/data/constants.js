@@ -15,5 +15,5 @@ export const SITE_DATA = {
     email: "sohailshabbir2005@gmail.com",
     phone: "+92 329 1729925",
     location: "Rahim Yar Khan, Pakistan",
-    domain: "https://developersohail.online",
+    domain: "https://deveolpersohail.online",
 };

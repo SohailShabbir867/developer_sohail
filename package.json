@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "homepage": "https://developersohail.online",
+  "homepage": "https://deveolpersohail.online",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

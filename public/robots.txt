@@ -1,9 +1,9 @@
-# Robots.txt for developersohail.online
+# Robots.txt for deveolpersohail.online
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://developersohail.online/sitemap.xml
+Sitemap: https://deveolpersohail.online/sitemap.xml
 
 # Host
-Host: https://developersohail.online
+Host: https://deveolpersohail.online
