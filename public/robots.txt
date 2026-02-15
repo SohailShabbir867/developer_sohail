@@ -1,0 +1,9 @@
+# Robots.txt for developersohail.online
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://developersohail.online/sitemap.xml
+
+# Host
+Host: https://developersohail.online

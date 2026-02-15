@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base Styles ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0D0D;
+}
+::-webkit-scrollbar-thumb {
+  background: #FF6600;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF8533;
+}
+
+/* ── Selection ── */
+::selection {
+  background-color: rgba(255, 102, 0, 0.3);
+  color: #ffffff;
+}
+
+/* ── Gradient Text ── */
+.gradient-text {
+  background: linear-gradient(135deg, #FF6600, #FF8533);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glow Effects ── */
+.glow-orange {
+  box-shadow: 0 0 30px rgba(255, 102, 0, 0.2);
+}
+.glow-orange-hover:hover {
+  box-shadow: 0 0 40px rgba(255, 102, 0, 0.4);
+}
+
+/* ── Card Glass Effect ── */
+.glass-card {
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ── Smooth outline focus ── */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #FF6600 !important;
+  box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.15);
+}
+
