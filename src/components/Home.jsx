@@ -178,7 +178,7 @@ const Home = () => {
                 Hire Me
               </a>
               <a
-                href="https://drive.google.com/file/d/1TZNT_KzNEJazYbAMm2D7H7rPgdATrsKn/view?usp=sharing"
+                href="https://drive.google.com/file/d/1kcXV6ug3PhmZGFPTqi37Az63yUPnpKi4/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3.5 text-sm font-semibold text-white transition-all duration-300 border rounded-lg border-dark-200 hover:border-accent hover:text-accent hover:-translate-y-0.5"
