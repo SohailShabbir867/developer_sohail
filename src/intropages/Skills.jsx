@@ -1,65 +1,85 @@
 import { motion } from "framer-motion";
+import { HoverCard } from "../animations/MotionWrappers";
 
-import ReactLogo from "../assets/react.webp";
-import NodeLogo from "../assets/node.webp";
-import CssLogo from "../assets/css.webp";
-import HtmlLogo from "../assets/html.webp";
+import ReactLogo      from "../assets/react.webp";
+import NodeLogo       from "../assets/node.webp";
+import CssLogo        from "../assets/css.webp";
+import HtmlLogo       from "../assets/html.webp";
 import JavascriptLogo from "../assets/javascript.webp";
-import BootstrapLogo from "../assets/bootstrap.webp";
-import MongoLogo from "../assets/mongo.webp";
-import CppLogo from "../assets/cplusplus.webp";
-import CsharpLogo from "../assets/csharp.webp";
-import JavaLogo from "../assets/java.webp";
-import LinuxLogo from "../assets/linux.webp";
-import CLogo from "../assets/c.webp";
-import PhotoshopLogo from "../assets/photoshop.webp";
+import BootstrapLogo  from "../assets/bootstrap.webp";
+import MongoLogo      from "../assets/mongo.webp";
+import CppLogo        from "../assets/cplusplus.webp";
+import CsharpLogo     from "../assets/csharp.webp";
+import JavaLogo       from "../assets/java.webp";
+import LinuxLogo      from "../assets/linux.webp";
+import CLogo          from "../assets/c.webp";
+import PhotoshopLogo  from "../assets/photoshop.webp";
 import IllustratorLogo from "../assets/illustrator.webp";
-import LightroomLogo from "../assets/lightroom.webp";
+import LightroomLogo  from "../assets/lightroom.webp";
 
 const skillsData = [
-  { name: "React", imgSrc: ReactLogo },
-  { name: "Node.js", imgSrc: NodeLogo },
-  { name: "JavaScript", imgSrc: JavascriptLogo },
-  { name: "HTML", imgSrc: HtmlLogo },
-  { name: "CSS", imgSrc: CssLogo },
-  { name: "Bootstrap", imgSrc: BootstrapLogo },
-  { name: "MongoDB", imgSrc: MongoLogo },
-  { name: "C++", imgSrc: CppLogo },
-  { name: "Canva", imgSrc: CsharpLogo },
-  { name: "Java", imgSrc: JavaLogo },
-  { name: "Linux", imgSrc: LinuxLogo },
-  { name: "C", imgSrc: CLogo },
-  { name: "Photoshop", imgSrc: PhotoshopLogo },
+  { name: "React",       imgSrc: ReactLogo },
+  { name: "Node.js",     imgSrc: NodeLogo },
+  { name: "JavaScript",  imgSrc: JavascriptLogo },
+  { name: "HTML",        imgSrc: HtmlLogo },
+  { name: "CSS",         imgSrc: CssLogo },
+  { name: "Bootstrap",   imgSrc: BootstrapLogo },
+  { name: "MongoDB",     imgSrc: MongoLogo },
+  { name: "C++",         imgSrc: CppLogo },
+  { name: "Canva",       imgSrc: CsharpLogo },
+  { name: "Java",        imgSrc: JavaLogo },
+  { name: "Linux",       imgSrc: LinuxLogo },
+  { name: "C",           imgSrc: CLogo },
+  { name: "Photoshop",   imgSrc: PhotoshopLogo },
   { name: "Illustrator", imgSrc: IllustratorLogo },
-  { name: "Lightroom", imgSrc: LightroomLogo },
+  { name: "Lightroom",   imgSrc: LightroomLogo },
 ];
 
 const Skills = () => {
   return (
     <div>
-      <div className="grid grid-cols-3 gap-6 sm:grid-cols-4 md:grid-cols-5">
+      <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5">
         {skillsData.map((skill, index) => (
           <motion.div
             key={skill.name}
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.6, y: 20 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.05, duration: 0.4 }}
-            whileHover={{ y: -8, scale: 1.05 }}
-            className="flex flex-col items-center justify-center p-4 transition-all duration-300 border group rounded-xl bg-dark-100 border-dark-200 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/10"
+            transition={{
+              delay: index * 0.04,
+              type: "spring",
+              stiffness: 280,
+              damping: 18,
+            }}
           >
-            <img
-              src={skill.imgSrc}
-              alt={skill.name}
-              width={48}
-              height={48}
-              loading="lazy"
-              decoding="async"
-              className="object-contain w-10 h-10 mb-3 transition-transform duration-300 sm:w-12 sm:h-12 group-hover:scale-110"
-            />
-            <span className="text-xs font-medium text-center text-gray-400 transition-colors group-hover:text-white">
-              {skill.name}
-            </span>
+            <HoverCard intensity={15}>
+              <motion.div
+                whileHover={{ y: -6 }}
+                transition={{ type: "spring", stiffness: 380, damping: 22 }}
+                className="shimmer-card flex flex-col items-center justify-center p-4 transition-all duration-300 border group rounded-xl bg-dark-100 border-dark-200 hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10 relative overflow-hidden cursor-pointer"
+              >
+                {/* Background glow on hover */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-accent/5 via-transparent to-transparent rounded-xl" />
+
+                <motion.img
+                  src={skill.imgSrc}
+                  alt={skill.name}
+                  width={48}
+                  height={48}
+                  loading="lazy"
+                  decoding="async"
+                  className="object-contain w-10 h-10 mb-3 sm:w-12 sm:h-12 relative z-10"
+                  whileHover={{ rotate: [0, -8, 8, 0], scale: 1.15 }}
+                  transition={{ duration: 0.4 }}
+                />
+                <span className="text-xs font-medium text-center text-gray-400 transition-colors group-hover:text-white relative z-10">
+                  {skill.name}
+                </span>
+
+                {/* Active ring on hover */}
+                <div className="absolute inset-0 rounded-xl border border-transparent group-hover:border-accent/30 transition-all duration-300" />
+              </motion.div>
+            </HoverCard>
           </motion.div>
         ))}
       </div>

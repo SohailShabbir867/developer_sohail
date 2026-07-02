@@ -64,18 +64,16 @@ const About = () => {
                 <button
                   key={sec.id}
                   onClick={() => scrollToSection(i)}
-                  className={`group flex items-center gap-3 w-full px-4 py-3 rounded-xl text-left text-sm font-medium transition-all duration-300 ${
-                    activeIndex === i
+                  className={`group flex items-center gap-3 w-full px-4 py-3 rounded-xl text-left text-sm font-medium transition-all duration-300 ${activeIndex === i
                       ? "bg-accent/10 text-accent"
                       : "text-gray-500 hover:text-gray-300 hover:bg-dark-100"
-                  }`}
+                    }`}
                 >
                   <span
-                    className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                      activeIndex === i
+                    className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${activeIndex === i
                         ? "bg-accent scale-125"
                         : "bg-gray-600 group-hover:bg-gray-400"
-                    }`}
+                      }`}
                   />
                   {sec.label}
                 </button>
@@ -101,11 +99,10 @@ const About = () => {
               <button
                 key={sec.id}
                 onClick={() => scrollToSection(i)}
-                className={`relative px-4 py-2 text-xs font-medium rounded-full transition-all duration-300 ${
-                  activeIndex === i
+                className={`relative px-4 py-2 text-xs font-medium rounded-full transition-all duration-300 ${activeIndex === i
                     ? "text-white bg-accent shadow-lg shadow-accent/25"
                     : "text-white bg-accent/70 hover:bg-accent"
-                }`}
+                  }`}
               >
                 {sec.label}
               </button>
