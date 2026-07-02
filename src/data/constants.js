@@ -3,7 +3,7 @@
 
 export const SOCIAL_LINKS = {
     github: "https://github.com/SohailShabbir867",
-    linkedin: "https://www.linkedin.com/in/sohail-shabbir-064033351",
+    linkedin: "https://www.linkedin.com/in/sohail-shabbir-546a12375/",
     facebook: "https://www.facebook.com/share/1aeJrN99UA/",
     instagram: "https://www.instagram.com/sohailshabbir04",
     tiktok: "https://www.tiktok.com/@sohail.shabeer4",
