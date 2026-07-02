@@ -51,14 +51,14 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
       />
 
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-14 md:h-16">
 
           {/* Logo */}
           <a href="#home" className="relative z-10 group">
             <motion.span
               whileHover={{ letterSpacing: "0.12em" }}
               transition={{ type: "spring", stiffness: 300, damping: 22 }}
-              className="text-xl font-extrabold tracking-tight text-accent transition-all duration-300 group-hover:text-shimmer"
+              className="text-lg font-extrabold tracking-tight text-accent transition-all duration-300 group-hover:text-shimmer"
               style={{ display: "inline-block" }}
             >
               DEVELOPER SOHAIL
@@ -141,7 +141,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden border-t md:hidden bg-dark/95 backdrop-blur-xl border-dark-200"
           >
-            <div className="flex flex-col items-center py-8 space-y-6">
+            <div className="flex flex-col items-center py-6 space-y-4">
               {navLinks.map((link, i) => (
                 <motion.a
                   key={link}

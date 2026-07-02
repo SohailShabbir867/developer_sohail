@@ -103,7 +103,7 @@ const Contact = () => {
     }`;
 
   return (
-    <section id="contact" className="w-full py-20 lg:py-28 bg-dark-100 relative overflow-hidden">
+    <section id="contact" className="w-full py-14 lg:py-20 bg-dark-100 relative overflow-hidden">
       {/* Background orbs */}
       <div className="absolute top-0 right-10 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[350px] h-[350px] bg-accent/3 rounded-full blur-[100px] pointer-events-none" />
@@ -111,7 +111,7 @@ const Contact = () => {
       <div className="container max-w-6xl px-6 mx-auto lg:px-8">
         <FadeUp>
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-4xl font-extrabold md:text-5xl lg:text-6xl gradient-text">
+            <h2 className="mb-4 text-3xl font-extrabold md:text-4xl lg:text-5xl gradient-text">
               Hire Me
             </h2>
             <p className="text-gray-400">Let&apos;s work together on your next project</p>
@@ -185,7 +185,7 @@ const Contact = () => {
             <motion.form
               ref={form}
               onSubmit={sendForm}
-              className="p-6 space-y-5 border rounded-2xl bg-dark border-dark-200 lg:p-8 relative overflow-hidden focus-glow"
+              className="p-5 space-y-4 border rounded-2xl bg-dark border-dark-200 lg:p-6 relative overflow-hidden focus-glow"
               whileHover={{ borderColor: "rgba(255,102,0,0.2)" }}
               transition={{ duration: 0.3 }}
             >

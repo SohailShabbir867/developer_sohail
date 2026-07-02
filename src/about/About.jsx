@@ -44,12 +44,12 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="w-full py-20 lg:py-28 bg-dark">
+    <section id="about" className="w-full py-14 lg:py-20 bg-dark">
       <div className="container max-w-6xl px-6 mx-auto lg:px-8">
         {/* Section Header */}
         <FadeUp>
-          <div className="mb-16 text-center">
-            <h2 className="mb-4 text-4xl font-extrabold md:text-5xl lg:text-6xl gradient-text">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-3xl font-extrabold md:text-4xl lg:text-5xl gradient-text">
               About Me
             </h2>
             <div className="w-20 h-1 mx-auto rounded-full bg-accent" />
@@ -80,7 +80,7 @@ const About = () => {
               ))}
 
               {/* Progress line */}
-              <div className="relative h-40 ml-[11px] mt-4">
+              <div className="relative h-32 ml-[11px] mt-4">
                 <div className="absolute w-px h-full bg-dark-200" />
                 <motion.div
                   className="absolute w-px bg-accent"

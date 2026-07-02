@@ -12,7 +12,7 @@ const infoItems = [
 
 const Intro = () => {
   return (
-    <div className="grid items-center grid-cols-1 gap-12 md:grid-cols-2">
+    <div className="grid items-center grid-cols-1 gap-8 md:grid-cols-2">
       {/* Profile Image */}
       <FadeLeft className="flex justify-center">
         <div className="relative group">
@@ -24,7 +24,7 @@ const Intro = () => {
           />
 
           {/* Image frame */}
-          <div className="w-[260px] h-[340px] md:w-[280px] md:h-[380px] lg:w-[300px] lg:h-[420px] rounded-2xl overflow-hidden border border-dark-300 group-hover:border-accent/40 transition-all duration-500 shadow-2xl shadow-black/50 relative">
+          <div className="w-[220px] h-[290px] md:w-[240px] md:h-[320px] lg:w-[260px] lg:h-[360px] rounded-2xl overflow-hidden border border-dark-300 group-hover:border-accent/40 transition-all duration-500 shadow-2xl shadow-black/50 relative">
             <img
               src={Profile}
               alt="Sohail Shabbir"

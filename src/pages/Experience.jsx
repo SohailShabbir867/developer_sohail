@@ -28,7 +28,7 @@ const experienceData = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="w-full py-20 lg:py-28 bg-dark relative overflow-hidden">
+    <section id="experience" className="w-full py-14 lg:py-20 bg-dark relative overflow-hidden">
       {/* Background orbs */}
       <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-accent/4 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-10 w-[300px] h-[300px] bg-accent/3 rounded-full blur-[100px] pointer-events-none" />
@@ -37,7 +37,7 @@ const Experience = () => {
         {/* Header */}
         <FadeUp>
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-4xl font-extrabold md:text-5xl lg:text-6xl gradient-text">
+            <h2 className="mb-4 text-3xl font-extrabold md:text-4xl lg:text-5xl gradient-text">
               My Experience
             </h2>
             <p className="text-gray-400">Professional roles and contributions</p>
@@ -66,7 +66,7 @@ const Experience = () => {
             />
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-10">
             {experienceData.map((job, index) => (
               <motion.div
                 key={index}
@@ -108,7 +108,7 @@ const Experience = () => {
                   <motion.div
                     whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(255,102,0,0.08)" }}
                     transition={{ type: "spring", stiffness: 280, damping: 22 }}
-                    className="p-6 transition-all duration-300 border group rounded-2xl bg-dark-100 border-dark-200 hover:border-accent/40 lg:p-8 relative overflow-hidden"
+                    className="p-5 transition-all duration-300 border group rounded-2xl bg-dark-100 border-dark-200 hover:border-accent/40 lg:p-6 relative overflow-hidden"
                   >
                     {/* Inner shimmer */}
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-accent/4 via-transparent to-transparent rounded-2xl" />

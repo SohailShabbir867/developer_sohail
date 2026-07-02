@@ -93,7 +93,7 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="w-full py-20 lg:py-28 bg-dark-100 relative overflow-hidden">
+    <section id="portfolio" className="w-full py-14 lg:py-20 bg-dark-100 relative overflow-hidden">
       {/* Background orbs */}
       <div className="absolute -top-20 -left-20 w-[400px] h-[400px] bg-accent/4 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-accent/3 rounded-full blur-[100px] pointer-events-none" />
@@ -102,7 +102,7 @@ const Portfolio = () => {
         {/* Header */}
         <FadeUp>
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-4xl font-extrabold md:text-5xl lg:text-6xl gradient-text">
+            <h2 className="mb-4 text-3xl font-extrabold md:text-4xl lg:text-5xl gradient-text">
               My Projects
             </h2>
             <p className="max-w-2xl mx-auto text-gray-400">
@@ -119,7 +119,7 @@ const Portfolio = () => {
         </FadeUp>
 
         {/* Projects Grid */}
-        <StaggerContainer staggerDelay={0.12} className="grid gap-8 md:grid-cols-2">
+        <StaggerContainer staggerDelay={0.12} className="grid gap-6 md:grid-cols-2">
           {projects.map((project, index) => (
             <StaggerItem key={index}>
               <HoverCard intensity={8} className="h-full">
@@ -133,7 +133,7 @@ const Portfolio = () => {
                   />
 
                   {/* Image */}
-                  <div className="relative h-56 overflow-hidden bg-dark-200 flex-shrink-0">
+                  <div className="relative h-44 overflow-hidden bg-dark-200 flex-shrink-0">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -184,7 +184,7 @@ const Portfolio = () => {
                   </div>
 
                   {/* Content */}
-                  <div className="p-6 flex flex-col flex-1">
+                  <div className="p-5 flex flex-col flex-1">
                     <div className="flex items-center justify-between mb-3">
                       <h3 className="text-xl font-bold text-white transition-colors group-hover:text-accent">
                         {project.title}

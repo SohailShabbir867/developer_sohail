@@ -92,7 +92,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="relative w-full min-h-[calc(100vh-64px)] md:min-h-screen flex items-center bg-dark overflow-hidden"
+      className="relative w-full min-h-[calc(100vh-56px)] md:min-h-screen flex items-center bg-dark overflow-hidden"
     >
       {/* ── Floating ambient orbs ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -153,7 +153,7 @@ const Home = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="mb-2 text-lg text-gray-400 tracking-widest uppercase font-medium"
+              className="mb-1 text-sm text-gray-400 tracking-widest uppercase font-medium"
             >
               Hi, I am
             </motion.p>
@@ -162,7 +162,7 @@ const Home = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.1, delay: 0.3 }}
-              className="mb-3 text-4xl font-extrabold text-white md:text-5xl lg:text-6xl"
+              className="mb-2 text-3xl font-extrabold text-white md:text-4xl lg:text-5xl"
               style={{ perspective: "600px" }}
             >
               <LetterReveal text="Sohail Shabbir" className="" />
@@ -172,7 +172,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
-              className="mb-6 text-2xl font-extrabold sm:text-3xl md:text-4xl gradient-text min-h-[3rem] md:min-h-[3.5rem]"
+              className="mb-4 text-xl font-extrabold sm:text-2xl md:text-3xl gradient-text min-h-[2.5rem] md:min-h-[3rem]"
             >
               {displayedText}
               <span className="text-accent animate-pulse">|</span>
@@ -183,7 +183,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.0 }}
-              className="flex items-center mb-8 space-x-3"
+              className="flex items-center mb-6 space-x-3"
             >
               {socialIcons.map(({ icon: Icon, href }, i) => (
                 <motion.a
@@ -212,13 +212,13 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.2 }}
-              className="flex flex-wrap gap-4 mb-12"
+              className="flex flex-wrap gap-3 mb-8"
             >
               <motion.a
                 href="#contact"
                 whileHover={{ y: -3, boxShadow: "0 20px 40px rgba(255,102,0,0.4)" }}
                 whileTap={{ scale: 0.97 }}
-                className="ripple-btn px-8 py-3.5 text-sm font-semibold text-white rounded-lg bg-accent hover:bg-accent-dark transition-colors duration-300"
+                className="ripple-btn px-6 py-2.5 text-sm font-semibold text-white rounded-lg bg-accent hover:bg-accent-dark transition-colors duration-300"
               >
                 Hire Me
               </motion.a>
@@ -228,7 +228,7 @@ const Home = () => {
                 rel="noopener noreferrer"
                 whileHover={{ y: -3, borderColor: "#FF6600", color: "#FF6600" }}
                 whileTap={{ scale: 0.97 }}
-                className="ripple-btn px-8 py-3.5 text-sm font-semibold text-white transition-all duration-300 border rounded-lg border-dark-200 hover:border-accent hover:text-accent"
+                className="ripple-btn px-6 py-2.5 text-sm font-semibold text-white transition-all duration-300 border rounded-lg border-dark-200 hover:border-accent hover:text-accent"
               >
                 Download CV
               </motion.a>
@@ -250,7 +250,7 @@ const Home = () => {
                   transition={{ delay: 1.5 + i * 0.12, type: "spring", stiffness: 250, damping: 18 }}
                 >
                   <motion.p
-                    className="text-2xl font-extrabold text-accent md:text-3xl"
+                    className="text-xl font-extrabold text-accent md:text-2xl"
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400 }}
                   >
@@ -267,7 +267,7 @@ const Home = () => {
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4, type: "spring", stiffness: 120, damping: 18 }}
-            className="relative flex items-end justify-center order-1 lg:order-2"
+            className="relative flex items-end justify-center order-1 lg:order-2 scale-90 lg:scale-100"
           >
             <div className="relative group">
               {/* Rotating halo ring — outer */}
@@ -294,7 +294,7 @@ const Home = () => {
               />
 
               {/* Dark circle behind person */}
-              <div className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[380px] md:h-[380px] lg:w-[430px] lg:h-[430px] rounded-full bg-dark-200 absolute bottom-0 left-1/2 -translate-x-1/2 ring-1 ring-white/5">
+              <div className="w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] md:w-[330px] md:h-[330px] lg:w-[370px] lg:h-[370px] rounded-full bg-dark-200 absolute bottom-0 left-1/2 -translate-x-1/2 ring-1 ring-white/5">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/8 via-transparent to-accent/5 animate-glow-pulse" />
               </div>
 
@@ -306,7 +306,7 @@ const Home = () => {
                 height={430}
                 fetchPriority="high"
                 decoding="sync"
-                className="relative z-10 w-[280px] sm:w-[320px] md:w-[380px] lg:w-[430px] h-auto object-contain brightness-105 contrast-110 saturate-[0.85] group-hover:scale-[1.03] transition-transform duration-700 drop-shadow-[0_15px_40px_rgba(0,0,0,0.7)]"
+                className="relative z-10 w-[240px] sm:w-[280px] md:w-[330px] lg:w-[370px] h-auto object-contain brightness-105 contrast-110 saturate-[0.85] group-hover:scale-[1.03] transition-transform duration-700 drop-shadow-[0_15px_40px_rgba(0,0,0,0.7)]"
               />
 
               {/* Bottom fade blend */}
