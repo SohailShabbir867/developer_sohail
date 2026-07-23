@@ -98,7 +98,7 @@ const Portfolio = () => {
       <div className="absolute -top-20 -left-20 w-[400px] h-[400px] bg-accent/4 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-accent/3 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="container max-w-6xl px-6 mx-auto lg:px-8">
+      <div className="container max-w-7xl px-6 mx-auto lg:px-8">
         {/* Header */}
         <FadeUp>
           <div className="mb-16 text-center">
@@ -119,7 +119,7 @@ const Portfolio = () => {
         </FadeUp>
 
         {/* Projects Grid */}
-        <StaggerContainer staggerDelay={0.12} className="grid gap-6 md:grid-cols-2">
+        <StaggerContainer staggerDelay={0.12} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <StaggerItem key={index}>
               <HoverCard intensity={8} className="h-full">
