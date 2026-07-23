@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code, Terminal, Shield, MonitorSmartphone } from "lucide-react";
+import { Code, Terminal, Shield, MonitorSmartphone, SearchCode, BrainCircuit } from "lucide-react";
 
 const hobbies = [
   {
@@ -10,6 +10,24 @@ const hobbies = [
       "I enjoy writing clean and optimized code while building real-world web applications.",
       "I regularly practice problem-solving, improving logic, and exploring new technologies.",
       "My main focus is becoming a professional Full Stack Web Developer.",
+    ],
+  },
+  {
+    icon: <BrainCircuit className="w-6 h-6 text-accent" />,
+    title: "AI Researching",
+    highlight: "RAG Systems, AI Agents, Prompt Engineering, Model Fine-Tuning",
+    description: [
+      "Passionate about experimenting with LLMs, Retrieval-Augmented Generation (RAG), and agentic workflows.",
+      "I actively test open-source AI models and automation platforms like n8n and Openclaw to enhance developer productivity.",
+    ],
+  },
+  {
+    icon: <SearchCode className="w-6 h-6 text-accent" />,
+    title: "Technology & Web Researching",
+    highlight: "Technical Docs, Architecture Patterns, API Analysis",
+    description: [
+      "I enjoy deep-diving into official technical documentations, API specifications, and system architecture patterns.",
+      "Evaluating emerging web technologies, libraries, and tools allows me to design clean, scalable applications.",
     ],
   },
   {

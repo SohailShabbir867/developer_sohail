@@ -34,6 +34,9 @@ export default defineConfig({
           'vendor-react': ['react', 'react-dom'],
           'vendor-motion': ['framer-motion'],
           'vendor-icons': ['lucide-react', 'react-icons'],
+          // Three.js ecosystem is heavy — isolate it so it caches independently
+          // and only loads when the lazy 3D hero scene mounts.
+          'vendor-three': ['three', '@react-three/fiber', '@react-three/drei'],
         },
       },
     },

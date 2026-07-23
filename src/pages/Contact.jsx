@@ -87,7 +87,7 @@ const Contact = () => {
   ];
 
   const socials = [
-    { icon: <FaGithub size={20} />,    href: "https://github.com/sohailshabbir867",             label: "GitHub" },
+    { icon: <FaGithub size={20} />,    href: "https://github.com/SohailShabbir867",             label: "GitHub" },
     { icon: <FaLinkedin size={20} />,  href: "https://www.linkedin.com/in/sohail-shabbir-546a12375/", label: "LinkedIn" },
     { icon: <FaFacebook size={20} />,  href: "https://web.facebook.com/sohail.shabbir.268226",  label: "Facebook" },
     { icon: <FaInstagram size={20} />, href: SOCIAL_LINKS.instagram,                             label: "Instagram" },

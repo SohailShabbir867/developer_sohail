@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 import Profile from "../assets/profile.webp";
 import { SOCIAL_LINKS } from "../data/constants";
+import Hero3DLazy from "./Hero3DLazy";
 
 /* ── Floating orb config ── */
 const orbs = [
@@ -47,17 +48,19 @@ const LetterReveal = ({ text, className }) => {
   );
 };
 
+/* ── Typewriter roles (stable module-level constant) ── */
+const roles = [
+  "Full Stack MERN Developer",
+  "React.js Developer",
+  "Node.js & Express.js Developer",
+  "MongoDB Specialist",
+  "UI/UX Enthusiast",
+];
+
 const Home = () => {
   const [textIndex, setTextIndex]     = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [charIndex, setCharIndex]     = useState(0);
-  const roles = [
-    "Full Stack MERN Developer",
-    "React.js Developer",
-    "Node.js & Express.js Developer",
-    "MongoDB Specialist",
-    "UI/UX Enthusiast",
-  ];
 
   useEffect(() => {
     if (charIndex < roles[textIndex].length) {
@@ -94,6 +97,20 @@ const Home = () => {
       id="home"
       className="relative w-full min-h-[calc(100vh-56px)] md:min-h-screen flex items-center bg-dark overflow-hidden"
     >
+      {/* ── First-class 3D WebGL background layer ── */}
+      {/* Floating distortion blob + orbiting polyhedra + sparkles, all in brand orange. */}
+      <div className="absolute inset-0 z-0 opacity-70">
+        <Hero3DLazy />
+      </div>
+      {/* Radial vignette so the 3D scene frames the content without overpowering it */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, transparent 35%, rgba(13,13,13,0.65) 80%, #0D0D0D 100%)",
+        }}
+      />
+
       {/* ── Floating ambient orbs ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {orbs.map((orb, i) => (
@@ -216,6 +233,21 @@ const Home = () => {
             >
               <motion.a
                 href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.getElementById("contact");
+                  if (element) {
+                    const navOffset = 70;
+                    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+                    window.scrollTo({
+                      top: elementPosition - navOffset,
+                      behavior: "smooth",
+                    });
+                    if (window.history.pushState) {
+                      window.history.pushState(null, "", "#contact");
+                    }
+                  }
+                }}
                 whileHover={{ y: -3, boxShadow: "0 20px 40px rgba(255,102,0,0.4)" }}
                 whileTap={{ scale: 0.97 }}
                 className="ripple-btn px-6 py-2.5 text-sm font-semibold text-white rounded-lg bg-accent hover:bg-accent-dark transition-colors duration-300"
@@ -270,32 +302,9 @@ const Home = () => {
             className="relative flex items-end justify-center order-1 lg:order-2 scale-90 lg:scale-100"
           >
             <div className="relative group">
-              {/* Rotating halo ring — outer */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
-                className="absolute -inset-4 rounded-full pointer-events-none"
-                style={{
-                  background:
-                    "conic-gradient(from 0deg, transparent 60%, rgba(255,102,0,0.5) 80%, transparent 100%)",
-                  borderRadius: "50%",
-                }}
-              />
-              {/* Rotating halo ring — inner (opposite dir) */}
-              <motion.div
-                animate={{ rotate: -360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute -inset-2 rounded-full pointer-events-none"
-                style={{
-                  background:
-                    "conic-gradient(from 180deg, transparent 70%, rgba(255,133,51,0.3) 90%, transparent 100%)",
-                  borderRadius: "50%",
-                }}
-              />
-
-              {/* Dark circle behind person */}
-              <div className="w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] md:w-[330px] md:h-[330px] lg:w-[370px] lg:h-[370px] rounded-full bg-dark-200 absolute bottom-0 left-1/2 -translate-x-1/2 ring-1 ring-white/5">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/8 via-transparent to-accent/5 animate-glow-pulse" />
+              {/* Dark circle behind person (matching reference layout) */}
+              <div className="w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] md:w-[330px] md:h-[330px] lg:w-[370px] lg:h-[370px] rounded-full bg-[#181818] absolute bottom-0 left-1/2 -translate-x-1/2 border border-white/5 shadow-2xl">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-b from-white/[0.03] to-transparent pointer-events-none" />
               </div>
 
               {/* Profile image */}
@@ -306,28 +315,11 @@ const Home = () => {
                 height={430}
                 fetchPriority="high"
                 decoding="sync"
-                className="relative z-10 w-[240px] sm:w-[280px] md:w-[330px] lg:w-[370px] h-auto object-contain brightness-105 contrast-110 saturate-[0.85] group-hover:scale-[1.03] transition-transform duration-700 drop-shadow-[0_15px_40px_rgba(0,0,0,0.7)]"
+                className="relative z-10 w-[240px] sm:w-[280px] md:w-[330px] lg:w-[370px] h-auto object-contain brightness-105 contrast-110 saturate-[0.85] group-hover:scale-[1.02] transition-transform duration-500 drop-shadow-[0_15px_40px_rgba(0,0,0,0.8)]"
               />
 
               {/* Bottom fade blend */}
-              <div className="absolute bottom-0 left-0 right-0 z-20 h-20 bg-gradient-to-t from-dark to-transparent" />
-
-              {/* Decorative floating dots */}
-              <motion.div
-                className="absolute z-10 w-3 h-3 rounded-full shadow-lg top-6 right-4 bg-accent shadow-accent/50"
-                animate={{ y: [0, -12, 0], scale: [1, 1.2, 1] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              />
-              <motion.div
-                className="absolute z-10 w-2 h-2 rounded-full shadow-md bottom-20 -left-2 bg-accent/70 shadow-accent/30"
-                animate={{ y: [0, 10, 0], scale: [1, 1.3, 1] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
-              />
-              <motion.div
-                className="absolute z-10 w-1.5 h-1.5 rounded-full top-1/2 -right-3 bg-accent/50"
-                animate={{ y: [0, -8, 0], opacity: [0.5, 1, 0.5] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-              />
+              <div className="absolute bottom-0 left-0 right-0 z-20 h-16 bg-gradient-to-t from-dark to-transparent" />
             </div>
           </motion.div>
 

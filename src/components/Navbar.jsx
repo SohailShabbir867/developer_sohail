@@ -32,6 +32,34 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+
+    const scrollToTarget = () => {
+      const element = document.getElementById(targetId);
+      if (element) {
+        const navOffset = 70;
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - navOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+        if (window.history.pushState) {
+          window.history.pushState(null, "", `#${targetId}`);
+        }
+      }
+    };
+
+    if (isMenuOpen) {
+      setTimeout(scrollToTarget, 100);
+    } else {
+      scrollToTarget();
+    }
+  };
+
   return (
     <motion.nav
       initial={{ y: -80, opacity: 0 }}
@@ -54,7 +82,11 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
         <div className="flex items-center justify-between h-14 md:h-16">
 
           {/* Logo */}
-          <a href="#home" className="relative z-10 group">
+          <a
+            href="#home"
+            onClick={(e) => handleNavClick(e, "home")}
+            className="relative z-10 group"
+          >
             <motion.span
               whileHover={{ letterSpacing: "0.12em" }}
               transition={{ type: "spring", stiffness: 300, damping: 22 }}
@@ -73,6 +105,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
               <motion.a
                 key={link}
                 href={`#${link.toLowerCase()}`}
+                onClick={(e) => handleNavClick(e, link.toLowerCase())}
                 initial={{ opacity: 0, y: -12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 + i * 0.07, type: "spring", stiffness: 260, damping: 20 }}
@@ -98,6 +131,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
             ))}
             <motion.a
               href="#contact"
+              onClick={(e) => handleNavClick(e, "contact")}
               initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5, type: "spring", stiffness: 260, damping: 18 }}
@@ -146,7 +180,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
                 <motion.a
                   key={link}
                   href={`#${link.toLowerCase()}`}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => handleNavClick(e, link.toLowerCase())}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
@@ -162,7 +196,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
               ))}
               <motion.a
                 href="#contact"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, "contact")}
                 initial={{ opacity: 0, scale: 0.85 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.3, type: "spring", stiffness: 260, damping: 20 }}

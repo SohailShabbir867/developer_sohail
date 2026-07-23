@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useTransform, useSpring } from "framer-motion"; // eslint-disable-line
+import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
 
 /* ─── Spring config presets ─── */
@@ -11,7 +11,6 @@ const springGentle = { type: "spring", stiffness: 120, damping: 18 };
 export const FadeUp = ({
   children,
   delay = 0,
-  duration = 0.6,
   className = "",
 }) => (
   <motion.div
@@ -31,7 +30,6 @@ export const FadeUp = ({
 export const FadeLeft = ({
   children,
   delay = 0,
-  duration = 0.6,
   className = "",
 }) => (
   <motion.div
@@ -51,7 +49,6 @@ export const FadeLeft = ({
 export const FadeRight = ({
   children,
   delay = 0,
-  duration = 0.6,
   className = "",
 }) => (
   <motion.div
@@ -90,7 +87,6 @@ export const BlurIn = ({
 export const ScaleUp = ({
   children,
   delay = 0,
-  duration = 0.5,
   className = "",
 }) => (
   <motion.div

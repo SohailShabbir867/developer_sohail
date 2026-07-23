@@ -12,6 +12,22 @@ const socials = [
 ];
 
 const Footer = () => {
+  const handleFooterNavClick = (e, targetId) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      const navOffset = 70;
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementPosition - navOffset,
+        behavior: "smooth",
+      });
+      if (window.history.pushState) {
+        window.history.pushState(null, "", `#${targetId}`);
+      }
+    }
+  };
+
   return (
     <footer className="py-12 border-t bg-dark border-dark-200 relative overflow-hidden">
       {/* Ambient glow */}
@@ -23,6 +39,7 @@ const Footer = () => {
         {/* Logo */}
         <motion.a
           href="#home"
+          onClick={(e) => handleFooterNavClick(e, "home")}
           whileHover={{ letterSpacing: "0.1em", textShadow: "0 0 20px rgba(255,102,0,0.5)" }}
           transition={{ type: "spring", stiffness: 300, damping: 22 }}
           className="text-xl font-extrabold tracking-tight text-accent transition-all duration-300"
@@ -36,6 +53,7 @@ const Footer = () => {
             <motion.a
               key={link}
               href={`#${link.toLowerCase()}`}
+              onClick={(e) => handleFooterNavClick(e, link.toLowerCase())}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

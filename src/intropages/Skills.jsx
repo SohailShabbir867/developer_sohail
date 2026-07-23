@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { HoverCard } from "../animations/MotionWrappers";
+import { BrainCircuit, Cpu, Workflow, Cloud, Server, Network } from "lucide-react";
 
 import ReactLogo      from "../assets/react.webp";
 import NodeLogo       from "../assets/node.webp";
@@ -18,21 +19,27 @@ import IllustratorLogo from "../assets/illustrator.webp";
 import LightroomLogo  from "../assets/lightroom.webp";
 
 const skillsData = [
-  { name: "React",       imgSrc: ReactLogo },
-  { name: "Node.js",     imgSrc: NodeLogo },
-  { name: "JavaScript",  imgSrc: JavascriptLogo },
-  { name: "HTML",        imgSrc: HtmlLogo },
-  { name: "CSS",         imgSrc: CssLogo },
-  { name: "Bootstrap",   imgSrc: BootstrapLogo },
-  { name: "MongoDB",     imgSrc: MongoLogo },
-  { name: "C++",         imgSrc: CppLogo },
-  { name: "Canva",       imgSrc: CsharpLogo },
-  { name: "Java",        imgSrc: JavaLogo },
-  { name: "Linux",       imgSrc: LinuxLogo },
-  { name: "C",           imgSrc: CLogo },
-  { name: "Photoshop",   imgSrc: PhotoshopLogo },
-  { name: "Illustrator", imgSrc: IllustratorLogo },
-  { name: "Lightroom",   imgSrc: LightroomLogo },
+  { name: "React",               imgSrc: ReactLogo },
+  { name: "Node.js",             imgSrc: NodeLogo },
+  { name: "JavaScript",          imgSrc: JavascriptLogo },
+  { name: "HTML",                imgSrc: HtmlLogo },
+  { name: "CSS",                 imgSrc: CssLogo },
+  { name: "Bootstrap",           imgSrc: BootstrapLogo },
+  { name: "MongoDB",             imgSrc: MongoLogo },
+  { name: "RAG AI Training",     icon: <BrainCircuit className="w-10 h-10 sm:w-12 sm:h-12 text-accent" /> },
+  { name: "Openclaw Automation", icon: <Cpu className="w-10 h-10 sm:w-12 sm:h-12 text-accent" /> },
+  { name: "n8n Automation",      icon: <Workflow className="w-10 h-10 sm:w-12 sm:h-12 text-accent" /> },
+  { name: "Azure",               icon: <Cloud className="w-10 h-10 sm:w-12 sm:h-12 text-accent" /> },
+  { name: "Amazon Web Hosting",  icon: <Server className="w-10 h-10 sm:w-12 sm:h-12 text-accent" /> },
+  { name: "Basic Networking",    icon: <Network className="w-10 h-10 sm:w-12 sm:h-12 text-accent" /> },
+  { name: "C++",                 imgSrc: CppLogo },
+  { name: "Canva",               imgSrc: CsharpLogo },
+  { name: "Java",                imgSrc: JavaLogo },
+  { name: "Linux",               imgSrc: LinuxLogo },
+  { name: "C",                   imgSrc: CLogo },
+  { name: "Photoshop",           imgSrc: PhotoshopLogo },
+  { name: "Illustrator",         imgSrc: IllustratorLogo },
+  { name: "Lightroom",           imgSrc: LightroomLogo },
 ];
 
 const Skills = () => {
@@ -61,17 +68,28 @@ const Skills = () => {
                 {/* Background glow on hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-accent/5 via-transparent to-transparent rounded-xl" />
 
-                <motion.img
-                  src={skill.imgSrc}
-                  alt={skill.name}
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                  decoding="async"
-                  className="object-contain w-10 h-10 mb-3 sm:w-12 sm:h-12 relative z-10"
-                  whileHover={{ rotate: [0, -8, 8, 0], scale: 1.15 }}
-                  transition={{ duration: 0.4 }}
-                />
+                {skill.imgSrc ? (
+                  <motion.img
+                    src={skill.imgSrc}
+                    alt={skill.name}
+                    width={48}
+                    height={48}
+                    loading="lazy"
+                    decoding="async"
+                    className="object-contain w-10 h-10 mb-3 sm:w-12 sm:h-12 relative z-10"
+                    whileHover={{ rotate: [0, -8, 8, 0], scale: 1.15 }}
+                    transition={{ duration: 0.4 }}
+                  />
+                ) : (
+                  <motion.div
+                    className="flex items-center justify-center w-10 h-10 mb-3 sm:w-12 sm:h-12 relative z-10"
+                    whileHover={{ rotate: [0, -8, 8, 0], scale: 1.15 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    {skill.icon}
+                  </motion.div>
+                )}
+
                 <span className="text-xs font-medium text-center text-gray-400 transition-colors group-hover:text-white relative z-10">
                   {skill.name}
                 </span>

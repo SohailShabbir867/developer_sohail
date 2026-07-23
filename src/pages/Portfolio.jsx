@@ -33,7 +33,7 @@ const projects = [
     tags: ["React.js", "Tailwind CSS", "EmailJS", "Socket.io", "MongoDB"],
     image: RoomBridge,
     live: "https://roombridgefrontend.vercel.app/",
-    github: "https://github.com/sohailshabbir867/",
+    github: "https://github.com/SohailShabbir867/",
   },
   {
     title: "Portfolio Website",
@@ -41,8 +41,8 @@ const projects = [
       "Built with React.js and Tailwind CSS. Showcases skills, resume, and contact information with a fully responsive design.",
     tags: ["React.js", "Tailwind CSS", "EmailJS"],
     image: PortfolioImg,
-    live: "https://sohailshabbir867.github.io/Hassan-Mahmood/",
-    github: "https://github.com/sohailshabbir867/Hassan-Mahmood",
+    live: "https://SohailShabbir867.github.io/Hassan-Mahmood/",
+    github: "https://github.com/SohailShabbir867/Hassan-Mahmood",
   },
   {
     title: "Food Garden",
@@ -50,8 +50,8 @@ const projects = [
       "A fast food menu and ordering system with smooth animations and hover effects. Fully responsive across all devices.",
     tags: ["React.js", "Tailwind CSS", "Vite"],
     image: FoodGardenImg,
-    live: "https://sohailshabbir867.github.io/Food-Garden/",
-    github: "https://github.com/sohailshabbir867/Food-Garden",
+    live: "https://SohailShabbir867.github.io/Food-Garden/",
+    github: "https://github.com/SohailShabbir867/Food-Garden",
   },
   {
     title: "E-commerce UI",
@@ -59,8 +59,8 @@ const projects = [
       "Features a responsive layout with product cards, categories, and an interactive shopping cart optimized for all devices.",
     tags: ["React.js", "Vite", "Tailwind CSS"],
     image: EcommerceImg,
-    live: "https://sohailshabbir867.github.io/eCommerce-website/",
-    github: "https://github.com/sohailshabbir867/eCommerce-website",
+    live: "https://SohailShabbir867.github.io/eCommerce-website/",
+    github: "https://github.com/SohailShabbir867/eCommerce-website",
   },
   {
     title: "Weather App",
@@ -68,8 +68,8 @@ const projects = [
       "Displays real-time weather data using OpenWeatherMap API with a simple, user-friendly interface.",
     tags: ["JavaScript", "API", "CSS"],
     image: WeatherImg,
-    live: "https://sohailshabbir867.github.io/my-app/",
-    github: "https://github.com/sohailshabbir867/my-app",
+    live: "https://SohailShabbir867.github.io/my-app/",
+    github: "https://github.com/SohailShabbir867/my-app",
   },
   {
     title: "Jobs Board",
@@ -77,8 +77,8 @@ const projects = [
       "A platform where people can find and post jobs. Includes sign-in and register pages with smooth user experience.",
     tags: ["React.js", "Tailwind CSS", "Auth"],
     image: JobsImg,
-    live: "https://sohailshabbir867.github.io/Hassan-Mahmood/",
-    github: "https://github.com/sohailshabbir867/Hassan-Mahmood",
+    live: "https://SohailShabbir867.github.io/Hassan-Mahmood/",
+    github: "https://github.com/SohailShabbir867/Hassan-Mahmood",
   },
   {
     title: "Password Generator",
@@ -86,7 +86,7 @@ const projects = [
       "A secure password generator that allows users to customize password length, character types, and includes a copy-to-clipboard feature.",
     tags: ["JavaScript", "HTML", "CSS"],
     image: PasswordImg,
-    live: "https://sohailshabbir867.github.io/Password_Generator-/",
+    live: "https://SohailShabbir867.github.io/Password_Generator-/",
     github: "https://github.com/SohailShabbir867/Password_Generator-",
   },
 ];
@@ -190,7 +190,6 @@ const Portfolio = () => {
                         {project.title}
                       </h3>
                       <motion.div
-                        whileGroupHover={{ x: 3, y: -3 }}
                         className="transition-all duration-300 text-dark-300 group-hover:text-accent group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                       >
                         <ArrowUpRight size={18} />
