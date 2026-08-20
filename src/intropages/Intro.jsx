@@ -27,7 +27,8 @@ const Intro = () => {
           <div className="w-[220px] h-[290px] md:w-[240px] md:h-[320px] lg:w-[260px] lg:h-[360px] rounded-2xl overflow-hidden border border-dark-300 group-hover:border-accent/40 transition-all duration-500 shadow-2xl shadow-black/50 relative">
             <img
               src={Profile}
-              alt="Sohail Shabbir"
+              alt="Sohail Shabbir - MERN Developer and TypeScript Model Context Protocol Engineer"
+              title="Sohail Shabbir Profile"
               width={300}
               height={420}
               loading="lazy"
@@ -80,7 +81,7 @@ const Intro = () => {
             transition={{ delay: 0.8, type: "spring", stiffness: 260, damping: 18 }}
             className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-accent text-white text-xs font-bold tracking-wider shadow-lg shadow-accent/30 whitespace-nowrap"
           >
-            MERN Developer
+            Full Stack &amp; MCP Engineer
           </motion.div>
         </div>
       </FadeLeft>
@@ -103,10 +104,9 @@ const Intro = () => {
           transition={{ delay: 0.15, duration: 0.6 }}
           className="mb-6 text-sm leading-relaxed text-gray-400"
         >
-          A passionate Full Stack MERN Developer specializing in building
-          scalable web applications with MongoDB, Express.js, React.js, and
-          Node.js. I turn ideas into high-performance, responsive digital
-          experiences.
+          A passionate Full Stack MERN Developer and AI Systems Engineer specializing in building
+          scalable web applications with MongoDB, Express.js, React.js, and Node.js alongside
+          high-performance TypeScript Model Context Protocol (MCP) servers and RAG AI pipelines.
         </motion.p>
 
         <div className="space-y-1">

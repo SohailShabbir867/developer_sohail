@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { HoverCard } from "../animations/MotionWrappers";
-import { BrainCircuit, Cpu, Workflow, Cloud, Server, Network } from "lucide-react";
+import { BrainCircuit, Cpu, Workflow, Cloud, Server, Network, Bot, Code2 } from "lucide-react";
 
 import ReactLogo      from "../assets/react.webp";
 import NodeLogo       from "../assets/node.webp";
@@ -21,6 +21,8 @@ import LightroomLogo  from "../assets/lightroom.webp";
 const skillsData = [
   { name: "React",               imgSrc: ReactLogo },
   { name: "Node.js",             imgSrc: NodeLogo },
+  { name: "TypeScript",          icon: <Code2 className="w-10 h-10 sm:w-12 sm:h-12 text-accent" /> },
+  { name: "MCP Protocol",        icon: <Bot className="w-10 h-10 sm:w-12 sm:h-12 text-accent" /> },
   { name: "JavaScript",          imgSrc: JavascriptLogo },
   { name: "HTML",                imgSrc: HtmlLogo },
   { name: "CSS",                 imgSrc: CssLogo },

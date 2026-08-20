@@ -51,10 +51,11 @@ const LetterReveal = ({ text, className }) => {
 /* ── Typewriter roles (stable module-level constant) ── */
 const roles = [
   "Full Stack MERN Developer",
-  "React.js Developer",
-  "Node.js & Express.js Developer",
-  "MongoDB Specialist",
-  "UI/UX Enthusiast",
+  "TypeScript MCP Server Engineer",
+  "React.js & Node.js Developer",
+  "AI Agents & RAG Specialist",
+  "MongoDB & Express Architect",
+  "UI/UX & Frontend Engineer",
 ];
 
 const Home = () => {
@@ -310,7 +311,8 @@ const Home = () => {
               {/* Profile image */}
               <img
                 src={Profile}
-                alt="Sohail Shabbir"
+                alt="Sohail Shabbir - Professional Full Stack MERN Developer and TypeScript Model Context Protocol MCP Server Engineer"
+                title="Sohail Shabbir | Developer Sohail"
                 width={430}
                 height={430}
                 fetchPriority="high"
