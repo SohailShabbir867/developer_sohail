@@ -1,9 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://deveolpersohail.online/</loc>
-    <lastmod>2026-02-15</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    
+    <!-- Profile Image -->
+    <image:image>
+      <image:loc>https://deveolpersohail.online/assets/profile.webp</image:loc>
+      <image:title>Sohail Shabbir - Full Stack MERN Developer &amp; Model Context Protocol MCP Engineer</image:title>
+      <image:caption>Sohail Shabbir professional software engineer, MERN stack developer, and open-source TypeScript Model Context Protocol (MCP) server creator.</image:caption>
+    </image:image>
+
+    <!-- MCP Server Images -->
+    <image:image>
+      <image:loc>https://deveolpersohail.online/assets/mcp-vps.jpg</image:loc>
+      <image:title>VPS Connection MCP Server - TypeScript Model Context Protocol</image:title>
+      <image:caption>TypeScript Model Context Protocol (MCP) Server for SSH2 remote Linux VPS command execution, health telemetry monitoring, and file synchronization for AI agents.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://deveolpersohail.online/assets/mcp-n8n.jpg</image:loc>
+      <image:title>n8n Automation MCP Server - Workflow Engine AI Integration</image:title>
+      <image:caption>n8n Workflow Automation Model Context Protocol (MCP) Server connecting Claude AI and LLMs to trigger pipelines and execute automated tasks.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://deveolpersohail.online/assets/mcp-chrome.jpg</image:loc>
+      <image:title>Chrome DevTools MCP Server - Browser Automation &amp; DOM Inspector</image:title>
+      <image:caption>Chrome DevTools Protocol Model Context Protocol (MCP) server for automated browser navigation, DOM inspection, web scraping, and screenshots.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://deveolpersohail.online/assets/mcp-leads.jpg</image:loc>
+      <image:title>Leads Generation MCP Server - B2B Sales Intelligence Pipeline</image:title>
+      <image:caption>B2B Leads discovery and outreach pipeline Model Context Protocol (MCP) server with Google Sheets export and Gmail draft creator for AI agents.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://deveolpersohail.online/assets/mcp-file.jpg</image:loc>
+      <image:title>File and Media Manager MCP Server - CRUD &amp; Text Insertion</image:title>
+      <image:caption>File system manipulation and media management Model Context Protocol (MCP) server for AI code editors with atomic CRUD and text insertion.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://deveolpersohail.online/assets/mcp-blog.jpg</image:loc>
+      <image:title>SEO Blog Automation MCP Server - Content Intelligence</image:title>
+      <image:caption>SEO blog research and autonomous markdown publisher Model Context Protocol (MCP) server for Claude AI and Cursor IDE.</image:caption>
+    </image:image>
+
+    <!-- Web Project Images -->
+    <image:image>
+      <image:loc>https://deveolpersohail.online/assets/dailyblogs.png</image:loc>
+      <image:title>MERN Stack Blogging Platform - DailyBlogs</image:title>
+      <image:caption>Full-stack MERN blogging application with JWT authentication and TypeScript MCP server integration.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://deveolpersohail.online/assets/roombridge.png</image:loc>
+      <image:title>RoomBridge - Room &amp; Hostel Finder MERN Web Application</image:title>
+      <image:caption>MERN stack accommodation platform with real-time Socket.io chat and location filters.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://deveolpersohail.online/assets/researchflow.jpg</image:loc>
+      <image:title>ResearchFlow AI - RAG Vector Pipeline &amp; Document Intelligence</image:title>
+      <image:caption>Retrieval-Augmented Generation (RAG) pipeline with Qdrant vector database and web search synthesis.</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://deveolpersohail.online/assets/Foodgarden.webp</image:loc>
+      <image:title>Food Garden Restaurant Ordering Application</image:title>
+      <image:caption>Interactive food ordering interface built with React, Vite, and Tailwind CSS.</image:caption>
+    </image:image>
   </url>
 </urlset>

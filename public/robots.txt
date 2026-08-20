@@ -1,8 +1,27 @@
-# Robots.txt for deveolpersohail.online
+# Robots.txt for deveolpersohail.online - Sohail Shabbir Portfolio & MCP Servers
 User-agent: *
 Allow: /
+Allow: /assets/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
 
-# Sitemap
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+Allow: /assets/
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.webp$
+
+User-agent: Bingbot
+Allow: /
+
+# Canonical Sitemap
 Sitemap: https://deveolpersohail.online/sitemap.xml
 
 # Host
