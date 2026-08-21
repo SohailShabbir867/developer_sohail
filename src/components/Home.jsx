@@ -8,15 +8,15 @@ import Hero3DLazy from "./Hero3DLazy";
 /* ── Floating orb config ── */
 const orbs = [
   { size: 500, x: "-10%", y: "-20%", color: "rgba(255,102,0,0.07)", delay: 0, dur: 12 },
-  { size: 380, x: "60%",  y: "50%",  color: "rgba(255,133,51,0.05)", delay: 2, dur: 15 },
-  { size: 300, x: "30%",  y: "80%",  color: "rgba(255,102,0,0.06)", delay: 4, dur: 10 },
-  { size: 220, x: "80%",  y: "10%",  color: "rgba(230,81,0,0.04)",  delay: 1, dur: 18 },
+  { size: 380, x: "60%", y: "50%", color: "rgba(255,133,51,0.05)", delay: 2, dur: 15 },
+  { size: 300, x: "30%", y: "80%", color: "rgba(255,102,0,0.06)", delay: 4, dur: 10 },
+  { size: 220, x: "80%", y: "10%", color: "rgba(230,81,0,0.04)", delay: 1, dur: 18 },
 ];
 
 /* ── Tiny particle config ── */
 const particles = [
-  { size: 4, x: "15%", y: "20%", delay: 0,   cls: "particle-1" },
-  { size: 3, x: "75%", y: "35%", delay: 1,   cls: "particle-2" },
+  { size: 4, x: "15%", y: "20%", delay: 0, cls: "particle-1" },
+  { size: 3, x: "75%", y: "35%", delay: 1, cls: "particle-2" },
   { size: 5, x: "45%", y: "70%", delay: 2.5, cls: "particle-3" },
   { size: 3, x: "88%", y: "65%", delay: 0.8, cls: "particle-1" },
   { size: 4, x: "25%", y: "85%", delay: 3.2, cls: "particle-2" },
@@ -59,9 +59,9 @@ const roles = [
 ];
 
 const Home = () => {
-  const [textIndex, setTextIndex]     = useState(0);
+  const [textIndex, setTextIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
-  const [charIndex, setCharIndex]     = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
 
   useEffect(() => {
     if (charIndex < roles[textIndex].length) {
@@ -87,9 +87,9 @@ const Home = () => {
   ];
 
   const socialIcons = [
-    { icon: FaGithub,    href: SOCIAL_LINKS.github },
-    { icon: FaLinkedin,  href: SOCIAL_LINKS.linkedin },
-    { icon: FaFacebook,  href: SOCIAL_LINKS.facebook },
+    { icon: FaGithub, href: SOCIAL_LINKS.github },
+    { icon: FaLinkedin, href: SOCIAL_LINKS.linkedin },
+    { icon: FaFacebook, href: SOCIAL_LINKS.facebook },
     { icon: FaInstagram, href: SOCIAL_LINKS.instagram },
   ];
 

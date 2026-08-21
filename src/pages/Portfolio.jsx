@@ -33,13 +33,6 @@ import Dailyblogs from "../assets/dailyblogs.png";
 import RoomBridge from "../assets/roombridge.png";
 import ResearchImg from "../assets/researchflow.jpg";
 
-import McpVpsImg from "../assets/mcp-vps.jpg";
-import McpN8nImg from "../assets/mcp-n8n.jpg";
-import McpLeadsImg from "../assets/mcp-leads.jpg";
-import McpFileImg from "../assets/mcp-file.jpg";
-import McpChromeImg from "../assets/mcp-chrome.jpg";
-import McpBlogImg from "../assets/mcp-blog.jpg";
-
 // ── Full Stack Web Applications ──
 const webProjects = [
   {
@@ -68,34 +61,35 @@ const webProjects = [
   },
   {
     id: "ai-researchflow",
-    title: "ResearchFlow AI (RAG Pipeline)",
+    title: "AI ResearchFlow - Autonomous Deep Research",
     category: "web",
     description:
-      "Advanced Retrieval-Augmented Generation (RAG) system embedding research documents and PDFs into Qdrant vector database with real-time web search synthesis like Perplexity AI.",
-    tags: ["Python", "RAG", "LLM", "Qdrant", "Node.js", "React.js"],
+      "Autonomous AI deep-research engine powered by Google Gemini and arXiv APIs. Orchestrates parallel search, synthesizes academic literature, and generates structured research reports.",
+    tags: ["React.js", "Gemini 2.5", "Tailwind CSS", "arXiv API", "AI Agents"],
     image: ResearchImg,
-    live: "https://researchflow.deveolpersohail.online/",
-    github: "https://github.com/SohailShabbir867/ResearchFlow_AI",
+    live: "https://sohailshabbir867.github.io/ai-researchflow/",
+    github: "https://github.com/SohailShabbir867/ai-researchflow",
     featured: true,
   },
   {
     id: "food-garden",
-    title: "Food Garden Ordering App",
+    title: "FoodGarden - Full-Stack Food Ordering Platform",
     category: "web",
     description:
-      "Fast food menu and digital ordering system built with fluid animations, micro-interactions, and high-performance responsive layout.",
-    tags: ["React.js", "Tailwind CSS", "Vite", "Responsive UI"],
+      "Full-featured food delivery web platform with dynamic menu filtering, interactive cart management, real-time order tracking, and responsive mobile-first architecture.",
+    tags: ["React.js", "Node.js", "Tailwind CSS", "Express", "Stripe"],
     image: FoodGardenImg,
-    live: "https://food-garden.deveolpersohail.online",
-    github: "https://github.com/SohailShabbir867/Food-Garden",
+    live: "https://sohailshabbir867.github.io/Food-Garden-Website/",
+    github: "https://github.com/SohailShabbir867/Food-Garden-Website",
+    featured: true,
   },
   {
-    id: "ecommerce-ui",
-    title: "E-Commerce Storefront UI",
+    id: "ecommerce-platform",
+    title: "Modern E-Commerce Storefront",
     category: "web",
     description:
-      "High-converting storefront featuring dynamic product filtering, cart management, instant checkout UI, and mobile-first design.",
-    tags: ["React.js", "Vite", "Tailwind CSS", "State Management"],
+      "High-performance e-commerce frontend with category filtering, product search, cart state management, and optimized checkout flow.",
+    tags: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
     image: EcommerceImg,
     live: "https://SohailShabbir867.github.io/eCommerce-website/",
     github: "https://github.com/SohailShabbir867/eCommerce-website",
@@ -138,27 +132,26 @@ const webProjects = [
     title: "Developer Portfolio Website",
     category: "web",
     description:
-      "Interactive 3D developer portfolio showcasing MERN stack expertise, MCP servers, and modern web animations.",
-    tags: ["React.js", "Tailwind CSS", "Three.js", "EmailJS"],
+      "Interactive developer portfolio showcasing MERN stack expertise, MCP servers, and modern web background animations.",
+    tags: ["React.js", "Tailwind CSS", "HTML5 Canvas", "EmailJS"],
     image: PortfolioImg,
     live: "https://deveolpersohail.online",
     github: "https://github.com/SohailShabbir867/",
   },
 ];
 
-// ── Model Context Protocol (MCP) Servers ──
+// ── Model Context Protocol (MCP) Servers (3 Core Servers) ──
 const mcpServers = [
   {
-    id: "vps-connection-mcp",
-    title: "VPS Connection MCP Server",
-    badge: "Infrastructure & SSH",
+    id: "chrome-devtools-mcp",
+    title: "Chrome DevTools MCP Server",
+    badge: "Browser Automation",
     category: "mcp",
     description:
-      "High-performance TypeScript Model Context Protocol (MCP) server enabling AI models (Claude, Cursor) to connect securely to remote Linux VPS instances via SSH2. Execute terminal commands, stream live CPU/RAM metrics, manage systemd services, and synchronize remote files seamlessly.",
-    tags: ["TypeScript", "Model Context Protocol", "SSH2", "Linux VPS", "DevOps", "Docker"],
-    tools: ["ssh_execute", "vps_metrics", "service_control", "file_sync"],
-    image: McpVpsImg,
-    github: "https://github.com/SohailShabbir867/vps_connection_mcp",
+      "Comprehensive Chrome DevTools Protocol (CDP) MCP server allowing AI agents to control browser sessions, navigate pages, extract full DOM trees, evaluate JavaScript, inspect network waterfalls, test accessibility, and capture high-resolution screenshots.",
+    tags: ["TypeScript", "Chrome DevTools", "Puppeteer", "DOM Inspector", "Web Automation"],
+    tools: ["navigate_page", "take_screenshot", "evaluate_script", "inspect_network"],
+    github: "https://github.com/SohailShabbir867/chrome-mcp-server",
     featured: true,
   },
   {
@@ -170,60 +163,19 @@ const mcpServers = [
       "Empowers LLMs and autonomous AI agents to interact directly with the n8n workflow automation engine. Trigger automated pipelines, inspect active node configurations, query execution logs in real-time, and dispatch dynamic webhook payloads.",
     tags: ["TypeScript", "n8n Engine", "MCP Protocol", "REST API", "Automation", "JSON-RPC"],
     tools: ["trigger_workflow", "list_workflows", "get_execution_data", "webhook_dispatch"],
-    image: McpN8nImg,
     github: "https://github.com/SohailShabbir867/n8n_mcp",
     featured: true,
   },
   {
-    id: "chrome-devtools-mcp",
-    title: "Chrome DevTools MCP Server",
-    badge: "Browser Automation",
-    category: "mcp",
-    description:
-      "Comprehensive Chrome DevTools Protocol (CDP) MCP server allowing AI agents to control browser sessions, navigate pages, extract full DOM trees, evaluate JavaScript, inspect network waterfalls, test accessibility, and capture high-resolution screenshots.",
-    tags: ["TypeScript", "Chrome DevTools", "Puppeteer", "DOM Inspector", "Web Automation"],
-    tools: ["navigate_page", "take_screenshot", "evaluate_script", "inspect_network"],
-    image: McpChromeImg,
-    github: "https://github.com/SohailShabbir867/chrome-mcp-server",
-    featured: true,
-  },
-  {
     id: "leads-generation-mcp",
-    title: "Leads Generation & Outreach MCP",
+    title: "Leads Generation MCP Server",
     badge: "B2B Sales Intelligence",
     category: "mcp",
     description:
       "Automated end-to-end B2B lead discovery and outreach pipeline server. Enables AI assistants to search local business places, analyze contact intelligence, export enriched records to Google Sheets, and generate personalized Gmail outreach drafts.",
     tags: ["TypeScript", "Lead Discovery", "Google Sheets API", "Gmail API", "B2B Pipeline"],
     tools: ["leads_search", "places_search", "leads_analyze", "add_to_sheet", "draft_gmail"],
-    image: McpLeadsImg,
     github: "https://github.com/SohailShabbir867/leads_generation_mcp-",
-    featured: true,
-  },
-  {
-    id: "file-mcp-server",
-    title: "File & Media Manager MCP Server",
-    badge: "File System & Media",
-    category: "mcp",
-    description:
-      "Robust TypeScript file manipulation MCP server built for AI code assistants. Supports atomic file read/write, precise text & code insertion, image addition, directory tree traversal, and batch workspace updates with full sandboxing.",
-    tags: ["TypeScript", "File System", "Image Processing", "CRUD", "Workspace Tools"],
-    tools: ["read_file", "write_file", "insert_text", "add_image", "list_dir"],
-    image: McpFileImg,
-    github: "https://github.com/SohailShabbir867/file_mcp_server",
-    featured: true,
-  },
-  {
-    id: "blog-automation-mcp",
-    title: "SEO Blog Automation MCP Server",
-    badge: "Content Intelligence",
-    category: "mcp",
-    description:
-      "Automates deep research, SEO keyword analysis, and markdown publication directly into blogging systems. Integrates with Claude AI and Cursor IDE to generate ranked, humanized articles and publish them autonomously.",
-    tags: ["TypeScript", "SEO Optimization", "Content Generator", "Claude AI", "Cursor"],
-    tools: ["research_topic", "analyze_keywords", "generate_article", "publish_post"],
-    image: McpBlogImg,
-    github: "https://github.com/SohailShabbir867/Blog_Automation_MCP_Server",
     featured: true,
   },
 ];
@@ -249,92 +201,124 @@ const ProjectCard = ({ project, index, isMcp, onCopyGithub, copiedId }) => {
             }}
           />
 
-          {/* Image Preview Container */}
-          <div className="relative h-48 overflow-hidden bg-dark-200 flex-shrink-0">
-            <img
-              src={project.image}
-              alt={`${project.title} - ${isMcp ? "TypeScript MCP Server" : "Web Application"}`}
-              width={600}
-              height={224}
-              loading="lazy"
-              decoding="async"
-              className="object-cover w-full h-full transition-all duration-700 group-hover:scale-108 group-hover:brightness-75"
-            />
-            <div className="absolute inset-0 transition-opacity duration-400 opacity-0 bg-gradient-to-t from-dark via-dark/75 to-transparent group-hover:opacity-100" />
+          {!isMcp && project.image ? (
+            /* Image Preview Container (for Web Apps only) */
+            <div className="relative h-48 overflow-hidden bg-dark-200 flex-shrink-0">
+              <img
+                src={project.image}
+                alt={`${project.title} - Web Application`}
+                width={600}
+                height={224}
+                loading="lazy"
+                decoding="async"
+                className="object-cover w-full h-full transition-all duration-700 group-hover:scale-108 group-hover:brightness-75"
+              />
+              <div className="absolute inset-0 transition-opacity duration-400 opacity-0 bg-gradient-to-t from-dark via-dark/75 to-transparent group-hover:opacity-100" />
 
-            {/* Top Badges */}
-            <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
-              {isMcp ? (
-                <span className="flex items-center gap-1.5 px-3 py-1 text-xs font-bold tracking-wide rounded-full text-white bg-accent/90 backdrop-blur-md shadow-md border border-accent/40">
-                  <Server size={12} />
-                  <span>MCP Server</span>
-                </span>
-              ) : (
+              {/* Top Badges */}
+              <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
                 <span className="px-3 py-1 text-xs font-semibold tracking-wide rounded-full text-gray-200 bg-dark/90 backdrop-blur-md border border-dark-200">
                   Web App
                 </span>
-              )}
+              </div>
 
-              {isMcp && project.badge && (
-                <span className="px-2.5 py-0.5 text-[11px] font-medium rounded-full text-accent-light bg-dark/90 backdrop-blur-md border border-accent/30">
-                  {project.badge}
-                </span>
-              )}
+              {/* Hover Overlay Buttons */}
+              <div className="absolute inset-0 flex items-center justify-center gap-3 transition-all duration-300 translate-y-6 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 z-10">
+                {project.github && (
+                  <motion.a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.06, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold text-white transition-all duration-300 rounded-xl bg-dark-100/95 backdrop-blur-md hover:bg-accent border border-white/15 hover:border-accent shadow-lg"
+                    aria-label={`View GitHub repository for ${project.title}`}
+                  >
+                    <Github size={16} />
+                    <span>GitHub</span>
+                  </motion.a>
+                )}
+
+                {project.live && (
+                  <motion.a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.06, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold text-white transition-all duration-300 rounded-xl bg-accent backdrop-blur-md hover:bg-accent-light border border-accent shadow-lg shadow-accent/30"
+                    aria-label={`View live application for ${project.title}`}
+                  >
+                    <ExternalLink size={16} />
+                    <span>Live Demo</span>
+                  </motion.a>
+                )}
+              </div>
             </div>
+          ) : (
+            /* High-Tech Terminal Header for MCP Servers (Without Images) */
+            <div className="relative px-6 pt-5 pb-4 bg-gradient-to-b from-dark-200/80 to-transparent border-b border-dark-200/60 flex flex-col gap-3">
+              {/* Terminal Window Header Bar */}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
+                  <span className="ml-2 text-[11px] font-mono text-gray-400">mcp-server://v1.0</span>
+                </div>
 
-            {/* Hover Overlay Buttons */}
-            <div className="absolute inset-0 flex items-center justify-center gap-3 transition-all duration-300 translate-y-6 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 z-10">
-              {project.github && (
-                <motion.a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.06, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold text-white transition-all duration-300 rounded-xl bg-dark-100/95 backdrop-blur-md hover:bg-accent border border-white/15 hover:border-accent shadow-lg"
-                  aria-label={`View GitHub repository for ${project.title}`}
-                >
-                  <Github size={16} />
-                  <span>GitHub</span>
-                </motion.a>
-              )}
+                {project.badge && (
+                  <span className="px-2.5 py-0.5 text-[11px] font-medium rounded-full text-accent-light bg-accent/10 border border-accent/25">
+                    {project.badge}
+                  </span>
+                )}
+              </div>
 
-              {project.live ? (
-                <motion.a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.06, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold text-white transition-all duration-300 rounded-xl bg-accent backdrop-blur-md hover:bg-accent-light border border-accent shadow-lg shadow-accent/30"
-                  aria-label={`View live application for ${project.title}`}
-                >
-                  <ExternalLink size={16} />
-                  <span>Live Demo</span>
-                </motion.a>
-              ) : (
-                <motion.button
-                  onClick={() => onCopyGithub(project.id, project.github)}
-                  whileHover={{ scale: 1.06, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex items-center gap-2 px-4 py-2.5 text-xs sm:text-sm font-semibold text-white transition-all duration-300 rounded-xl bg-accent/90 backdrop-blur-md hover:bg-accent border border-accent shadow-lg"
-                  title="Copy GitHub Repo URL"
-                >
-                  {copiedId === project.id ? (
-                    <>
-                      <Check size={16} className="text-green-300" />
-                      <span>Copied!</span>
-                    </>
-                  ) : (
-                    <>
-                      <Copy size={16} />
-                      <span>Copy Repo</span>
-                    </>
+              {/* Server Icon & Protocol Identity */}
+              <div className="flex items-center justify-between mt-1">
+                <div className="flex items-center gap-2.5">
+                  <div className="p-2.5 rounded-xl bg-accent/15 border border-accent/30 text-accent shadow-lg shadow-accent/10 group-hover:scale-110 transition-transform duration-300">
+                    <Server size={20} />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-mono text-accent uppercase tracking-wider block">TypeScript Protocol</span>
+                    <span className="text-xs text-gray-400 font-medium">Model Context Protocol</span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  {project.github && (
+                    <motion.a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.08 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="p-2 rounded-lg bg-dark-100 hover:bg-accent border border-dark-200 hover:border-accent text-gray-300 hover:text-white transition-all shadow-md"
+                      title="View GitHub Repository"
+                      aria-label="View on GitHub"
+                    >
+                      <Github size={15} />
+                    </motion.a>
                   )}
-                </motion.button>
-              )}
+                  <motion.button
+                    onClick={() => onCopyGithub(project.id, `git clone ${project.github}.git`)}
+                    whileHover={{ scale: 1.08 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="p-2 rounded-lg bg-dark-100 hover:bg-dark-200 border border-dark-200 text-gray-300 hover:text-accent transition-all shadow-md"
+                    title="Copy Git Clone Command"
+                    aria-label="Copy Git Clone"
+                  >
+                    {copiedId === project.id ? (
+                      <Check size={15} className="text-green-400" />
+                    ) : (
+                      <Copy size={15} />
+                    )}
+                  </motion.button>
+                </div>
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Content Area */}
           <div className="p-6 flex flex-col flex-1">
