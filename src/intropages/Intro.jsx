@@ -81,7 +81,7 @@ const Intro = () => {
             transition={{ delay: 0.8, type: "spring", stiffness: 260, damping: 18 }}
             className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-accent text-white text-xs font-bold tracking-wider shadow-lg shadow-accent/30 whitespace-nowrap"
           >
-            Full Stack &amp; MCP Engineer
+            Full Stack MERN Developer
           </motion.div>
         </div>
       </FadeLeft>
@@ -104,9 +104,7 @@ const Intro = () => {
           transition={{ delay: 0.15, duration: 0.6 }}
           className="mb-6 text-sm leading-relaxed text-gray-400"
         >
-          A passionate Full Stack MERN Developer and AI Systems Engineer specializing in building
-          scalable web applications with MongoDB, Express.js, React.js, and Node.js alongside
-          high-performance TypeScript Model Context Protocol (MCP) servers and RAG AI pipelines.
+          A passionate Full Stack MERN Developer specializing in building scalable web applications with MongoDB, Express.js, React.js, and Node.js, integrating AI into modern web applications alongside high-performance TypeScript Model Context Protocol (MCP) servers.
         </motion.p>
 
         <div className="space-y-1">

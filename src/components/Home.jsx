@@ -53,7 +53,7 @@ const roles = [
   "Full Stack MERN Developer",
   "TypeScript MCP Server Engineer",
   "React.js & Node.js Developer",
-  "AI Agents & RAG Specialist",
+  "AI & Web Integration Developer",
   "MongoDB & Express Architect",
   "UI/UX & Frontend Engineer",
 ];
